@@ -1,8 +1,20 @@
 // Liene Putniņa, lr12022
 // A4. Given n integers. Calculate the minimum value of given integers and the number of the integers with this value.
 // Program created at: 2021/02/28
-//ERROR MSG
 //TEST CASES
+// int inputValue
+
+// while (continuLoop) {
+// cout >> enter a int value
+// cin >> something
+// if (somethin is int) {
+// inputValue = something
+// continueLoop = false
+// }
+// else {
+// cout >> wrong format, please input int
+// }
+// }
 
 #include <iostream> //Wrote stuff here
 #include <limits>
@@ -15,7 +27,6 @@ int findNumbers()
     // All of the variables defined
     int numbers[50];
     int count;
-    int i;
     int minValue;
     bool continueLoop = true;
 
@@ -38,26 +49,11 @@ int findNumbers()
             break;
     }
 
-    // int inputValue
-    // bool continuLoop
-
-    // while (continuLoop) {
-    // cout >> enter a int value
-    // cin >> something
-    // if (somethin is int) {
-    // inputValue = something
-    // continueLoop = false
-    // }
-    // else {
-    // cout >> wrong format, please input int
-    // }
-    // }
-
     // Program prints the enter message with the number of the array volume the user has entered
     cout << "Enter " << count << " numbers \n";
 
     // A loop that goes through the array of numbers the user has entered and prints them all out
-    for (i = 0; i < count; i++)
+    for (int i = 0; i < count; i++)
     {
         cin >> numbers[i];
         // A loop that checks if the wright data type is entered,
@@ -81,7 +77,7 @@ int findNumbers()
     // 2. Finds the number of times this integer occurs in the array and prints out their value
     minValue = numbers[0];
     int result = 0;
-    for (i = 0; i < count; i++)
+    for (int i = 0; i < count; i++)
     {
         // Checking if minValue is bigger than every element in the numbers array
         if (numbers[i] < minValue)
@@ -89,7 +85,7 @@ int findNumbers()
             // Comparing every value of numbers array to minValue
             minValue = numbers[i];
         }
-        for (i = 0; i < count; i++)
+        for (int i = 0; i < count; i++)
         {
             if (minValue == numbers[i])
             {
