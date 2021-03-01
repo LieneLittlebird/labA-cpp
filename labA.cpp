@@ -1,7 +1,6 @@
 // Liene Putniņa, lr12022
 // A4. Given n integers. Calculate the minimum value of given integers and the number of the integers with this value.
-// Program created at: 2021/02/28
-//TEST CASES
+// Program created at: 2021/03/01
 
 #include <iostream> 
 #include <limits>
