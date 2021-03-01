@@ -4,11 +4,12 @@
 //ERROR MSG
 //TEST CASES
 
-#include <iostream>
+#include <iostream> //Wrote stuff here
 using namespace std;
 
 //A function containing the instructions for the program
-int findNumbers () {
+int findNumbers()
+{
 
     // All of the variables defined
     int numbers[50];
@@ -24,38 +25,45 @@ int findNumbers () {
     cout << "Enter " << count << " numbers \n";
 
     // A loop that goes through the array of numbers the user has entered and prints them all out
-    for(i = 0; i < count; i++) {
+    for (i = 0; i < count; i++)
+    {
         cin >> numbers[i]; // Save entered value to temp var. Check if entered value is a number and then print out
     }
 
-    // A loop that: 
-    // 1.Finds the smallest integer in the array and prints it out, 
+    // A loop that:
+    // 1.Finds the smallest integer in the array and prints it out,
     // 2. Finds the number of times this integer occurs in the array and prints out their value
     minValue = numbers[0];
     int result = 0;
-    for(i = 0; i < count; i++) {
-        if(numbers[i] < minValue) {
+    for (i = 0; i < count; i++)
+    {
+        if (numbers[i] < minValue)
+        {
             minValue = numbers[i];
         }
-        for(i = 0; i < count; i++) {
-            if (minValue == numbers[i]) {
-                result ++;
+        for (i = 0; i < count; i++)
+        {
+            if (minValue == numbers[i])
+            {
+                result++;
             }
         }
     }
 
-    cout  << "The smallest number is: " << minValue << "." 
-    <<" It occurs " << result << " times" <<endl;
-    
+    cout << "The smallest number is: " << minValue << "."
+         << " It occurs " << result << " times" << endl;
+
     return 0;
 }
 
 // Execution of the program
-int main () {
+int main()
+{
     // Definition of the repeatable value
     int repeatExec;
     // A loop that lets the program be executed multiple times
-    do {
+    do
+    {
         findNumbers();
         cout << "Enter 1 to continue or 0 to quit: " << endl;
         cin >> repeatExec;
