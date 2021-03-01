@@ -84,14 +84,16 @@ int findNumbers()
         {
             // Comparing every value of numbers array to minValue
             minValue = numbers[i];
+            result = 1;
         }
-        for (int i = 0; i < count; i++)
-        {
+        else
+            // for (int i = 0; i < count; i++)
+            // {cl
             if (minValue == numbers[i])
-            {
-                result++;
-            }
+        {
+            result++;
         }
+        // }
     }
 
     cout << "The smallest number is: " << minValue << "."
