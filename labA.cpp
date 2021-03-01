@@ -2,40 +2,27 @@
 // A4. Given n integers. Calculate the minimum value of given integers and the number of the integers with this value.
 // Program created at: 2021/02/28
 //TEST CASES
-// int inputValue
 
-// while (continuLoop) {
-// cout >> enter a int value
-// cin >> something
-// if (somethin is int) {
-// inputValue = something
-// continueLoop = false
-// }
-// else {
-// cout >> wrong format, please input int
-// }
-// }
-
-#include <iostream> //Wrote stuff here
+#include <iostream> 
 #include <limits>
 using namespace std;
 
-//A function containing the instructions for the program
+//A function containing the instructions for the program is declared.
 int findNumbers()
 {
 
-    // All of the variables defined
     int numbers[50];
     int count;
     int minValue;
     bool continueLoop = true;
 
-    // UI for the program
-    cout << "Enter the number of elements in an array\n";
+    cout << "Enter the number of elements in an array:\n";
 
-    // User enters the volume of the array by writing a positive integer
+    // User enters the volume of the array by writing an integer.
     cin >> count;
 
+    // Input validation loop. If the wrong input type is entered (it fails), error state is cleared,
+    // and an error message is printed. If the input is of the correct type (!fail), the loop closes.
     while (continueLoop)
     {
         if (cin.fail())
@@ -49,15 +36,14 @@ int findNumbers()
             break;
     }
 
-    // Program prints the enter message with the number of the array volume the user has entered
-    cout << "Enter " << count << " numbers \n";
+    // Program prints the "enter" message with the array size the user has entered.
+    cout << "Enter " << count << " numbers: \n";
 
-    // A loop that goes through the array of numbers the user has entered and prints them all out
+    // A loop goes through the array of numbers the user has entered and prints them all out.
     for (int i = 0; i < count; i++)
     {
         cin >> numbers[i];
-        // A loop that checks if the wright data type is entered,
-        // clears the error log and lets the user try again with different data types
+        // Another input validation loop. Same as above.
         while (continueLoop)
         {
             if (cin.fail())
@@ -74,26 +60,23 @@ int findNumbers()
 
     // A loop that:
     // 1.Finds the smallest integer in the array and prints it out,
-    // 2. Finds the number of times this integer occurs in the array and prints out their value
+    // 2. Finds the number of times this integer occurs in the array and prints out their value.
     minValue = numbers[0];
     int result = 0;
     for (int i = 0; i < count; i++)
     {
-        // Checking if minValue is bigger than every element in the numbers array
+        // Checking if minValue is bigger than every element in the numbers array.
         if (numbers[i] < minValue)
         {
-            // Comparing every value of numbers array to minValue
+            // Comparing every value of numbers array to minValue and 
+            // reassigning a new value to the result variable, so that the the loop could continue.
             minValue = numbers[i];
             result = 1;
         }
-        else
-            // for (int i = 0; i < count; i++)
-            // {cl
-            if (minValue == numbers[i])
+        else if (minValue == numbers[i])
         {
             result++;
         }
-        // }
     }
 
     cout << "The smallest number is: " << minValue << "."
@@ -105,9 +88,8 @@ int findNumbers()
 // Execution of the program
 int main()
 {
-    // Definition of the repeatable value
+    // Definition of the repeatable value - it will be checked at the end of each execution cycle
     int repeatExec;
-    // A loop that lets the program be executed multiple times
     do
     {
         findNumbers();
