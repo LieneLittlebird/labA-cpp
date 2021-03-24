@@ -30,6 +30,12 @@ int findNumbers()
             cin.clear();
             cin.ignore(256, '\n');
         }
+        else if (count < 0)
+        {
+            cout << "Invalid input. Please, enter a positive integer\n";
+            cin.clear();
+            cin.ignore(256, '\n');
+        }
         else
         {
             continueLoop = false;
